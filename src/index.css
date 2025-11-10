@@ -1,0 +1,26 @@
+@import "tailwindcss";
+* {
+  /* global styles */
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  button,
+  input,
+  textarea,
+  a {
+    transition: all 0.3s;
+  }
+  a.active {
+    border-radius: 50%;
+  }
+  /* global classes styles */
+  .hover-btn {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      /* like on hover scale it to 400% */
+    }
+  }
+}
