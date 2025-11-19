@@ -1,5 +1,12 @@
 @import "tailwindcss";
-* {
+@theme {
+  --color-Olive: #2f3126;
+  --color-Dark-green: #161a18;
+  --color-Gray: #8d9180;
+  --color-Lime: #f3ffc9;
+}
+
+body {
   /* global styles */
   padding: 0px;
   margin: 0px;
@@ -7,20 +14,52 @@
   button,
   input,
   textarea,
+  img,
   a {
     transition: all 0.3s;
+    font-weight: 600;
   }
-  a.active {
-    border-radius: 50%;
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
   }
   /* global classes styles */
-  .hover-btn {
+  .btn-bloom {
     position: relative;
+    overflow: hidden;
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
-      /* like on hover scale it to 400% */
+      bottom: -100%;
+      left: 25%;
+      width: 50%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--color-Olive);
+      transition: all 0.8s;
     }
+    &:hover::after {
+      scale: 400%;
+    }
+  }
+  .swiper-control-btn {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    font-size: large;
+    background-color: var(--color-Dark-green);
+    color: var(--color-Lime);
+    transition: all 0.3s;
+    &:hover {
+      background: var(--color-Gray);
+      > svg {
+        scale: 0.8;
+      }
+    }
+  }
+  .instuery-swiper-title {
+    @apply absolute w-full text-center bottom-0 py-5 bg-linear-to-t from-Olive to-transparent text-Lime text-2xl;
   }
 }

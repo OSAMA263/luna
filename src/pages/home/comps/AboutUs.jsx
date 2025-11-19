@@ -1,0 +1,65 @@
+import AutoSlider from "@/components/AutoSlider";
+import Btn from "@/components/Btn";
+import Layout from "@/components/Layout";
+import { home_sponsers } from "@/data/slider";
+import { NavLink } from "react-router-dom";
+import ZoomInImg from "@/components/ZoomInImg";
+import SectionTitle from "@/components/SectionTitle";
+
+export default function AboutUs() {
+  return (
+    <>
+      <Layout as={"section"} id="sponsers" className="space-y-10">
+        <p className="text-Gray text-center font-semibold text-lg">
+          Trusted by fast-moving Corpo teams
+        </p>
+        <AutoSlider
+          dir="rtl"
+          spaceBetween={10}
+          slidesPerView={6}
+          array={home_sponsers}
+          className="[&_img]:size-20 py-14 flex items-center justify-center rounded-2xl bg-[#0e100f]"
+          shadowSides="from-black to-transparent w-32"
+        />
+      </Layout>
+
+      {/* our stragegies steps */}
+      <Layout as={"section"} id="strategies" className="flex gap-24">
+        <div className="flex-[1.5] flex flex-col gap-y-20">
+          <SectionTitle>
+            Informed strategy, Operational strenght, and sustainable results.
+          </SectionTitle>
+          <ZoomInImg src={"home/about-img.webp"} alt="strategy placeholder" />
+        </div>
+
+        {/* steps in lists */}
+        <div className="flex-1 flex flex-col justify-between text-Gray font-semibold text-lg">
+          <p>
+            We specialize in empowering Corpo companies with results-driven
+            consulting solutions tailored to modern business challenges.
+          </p>
+          <ul className="text-lg list-disc divide-y divide-Gray/50 border-y border-Gray/50">
+            {listSteps.map((step) => (
+              <li className="py-5" key={step}>
+                {step}
+              </li>
+            ))}
+          </ul>
+
+          <Btn variant="solid" className={"w-full text-center py-4"}>
+            <NavLink to="/about">
+              <span>More about us</span>
+            </NavLink>
+          </Btn>
+        </div>
+      </Layout>
+    </>
+  );
+}
+
+const listSteps = [
+  "Deep experience across Corpo sectors",
+  "Solutions aligned with your business goals",
+  "Frameworks built for long-term success",
+  "Working with you, not just for you",
+];
