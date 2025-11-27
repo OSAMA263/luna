@@ -4,9 +4,9 @@ import "swiper/css/effect-fade";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectFade } from "swiper/modules";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function AutoSlider(props) {
+function AutoSlider(props) {
   const {
     className = "",
     shadowSides = "",
@@ -28,14 +28,16 @@ export default function AutoSlider(props) {
   return (
     <Swiper
       slidesPerView={5}
-      autoplay={{
-        delay: 1,
-        disableOnInteraction: false,
-      }}
+      observer
+      observeParents
       freeMode
       speed={6000}
       allowTouchMove={false}
       loop
+      autoplay={{
+        delay: 1,
+        disableOnInteraction: false,
+      }}
       modules={
         autoSlide ? [Autoplay] : fade ? [Navigation, EffectFade] : [Navigation]
       }
@@ -49,7 +51,7 @@ export default function AutoSlider(props) {
               className={"flex! items-center gap-2 " + className}
               key={i}
             >
-              <img src={item.icon} alt={item.icon} />
+              <img loading="lazy" src={item.icon} alt={item.icon} />
               <span
                 className={`text-Gray text-lg font-semibold ${!autoSlide ? "instuery-swiper-title" : ""}`}
               >
@@ -69,3 +71,5 @@ export default function AutoSlider(props) {
     </Swiper>
   );
 }
+
+export default React.memo(AutoSlider);

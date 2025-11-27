@@ -7,11 +7,12 @@ import { home_services } from "../../../data/slider";
 import Btn from "@/components/Btn";
 import { Link } from "react-router-dom";
 import SectionTitle from "@/components/SectionTitle";
+import ShowInView from "@/components/ShowInView";
 
 export default function Hero() {
   return (
     <section id="home-hero">
-      <HeroPage className={"rounded-t-none p-3"}>
+      <HeroPage className={"rounded-t-none p-3! m-0!"}>
         <div className="overflow-hidden relative rounded-4xl h-[85dvh] w-full flex">
           {/* bg video player */}
           <video
@@ -25,12 +26,13 @@ export default function Hero() {
 
           {/* text on the videpo */}
           <Layout className="mt-auto grid grid-cols-2 justify-between pb-20">
-            <SectionTitle as={"h1"} className="text-7xl">
+            <SectionTitle as={"h1"} className="text-6xl">
               Built for Corpo, focused on results.
             </SectionTitle>
 
-            <div className="flex">
-              <Btn className="text-lg py-4 px-8 w-fit ms-auto mt-auto">
+            {/* link btn */}
+            <div className="flex ms-auto mt-auto">
+              <Btn i={2} btnClass="text-lg py-4 px-8 w-fit">
                 <Link to="/services">
                   <span>Explore our services</span>
                 </Link>

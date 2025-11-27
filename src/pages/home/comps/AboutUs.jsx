@@ -5,22 +5,27 @@ import { home_sponsers } from "@/data/slider";
 import { NavLink } from "react-router-dom";
 import ZoomInImg from "@/components/ZoomInImg";
 import SectionTitle from "@/components/SectionTitle";
+import ShowInView from "@/components/ShowInView";
 
 export default function AboutUs() {
   return (
     <>
-      <Layout as={"section"} id="sponsers" className="space-y-10">
-        <p className="text-Gray text-center font-semibold text-lg">
-          Trusted by fast-moving Corpo teams
-        </p>
-        <AutoSlider
-          dir="rtl"
-          spaceBetween={10}
-          slidesPerView={6}
-          array={home_sponsers}
-          className="[&_img]:size-20 py-14 flex items-center justify-center rounded-2xl bg-[#0e100f]"
-          shadowSides="from-black to-transparent w-32"
-        />
+      <Layout as={"section"} id="sponsers">
+        <div className="space-y-10">
+          <ShowInView>
+            <p className="text-Gray text-center font-semibold text-lg">
+              Trusted by fast-moving Corpo teams
+            </p>
+            <AutoSlider
+              dir="rtl"
+              spaceBetween={10}
+              slidesPerView={6}
+              array={home_sponsers}
+              className="[&_img]:size-20 py-14 flex items-center justify-center rounded-2xl bg-[#0e100f]"
+              shadowSides="from-black to-transparent w-32"
+            />
+          </ShowInView>
+        </div>
       </Layout>
 
       {/* our stragegies steps */}
@@ -29,24 +34,29 @@ export default function AboutUs() {
           <SectionTitle>
             Informed strategy, Operational strenght, and sustainable results.
           </SectionTitle>
-          <ZoomInImg src={"home/about-img.webp"} alt="strategy placeholder" />
+          <ShowInView>
+            <ZoomInImg
+              loading="lazy"
+              src={"home/about-img.webp"}
+              alt="strategy placeholder"
+            />
+          </ShowInView>
         </div>
 
         {/* steps in lists */}
         <div className="flex-1 flex flex-col justify-between text-Gray font-semibold text-lg">
-          <p>
+          <ShowInView>
             We specialize in empowering Corpo companies with results-driven
             consulting solutions tailored to modern business challenges.
-          </p>
+          </ShowInView>
           <ul className="text-lg list-disc divide-y divide-Gray/50 border-y border-Gray/50">
             {listSteps.map((step) => (
-              <li className="py-5" key={step}>
-                {step}
-              </li>
+              <ShowInView key={step}>
+                <li className="py-5">{step}</li>
+              </ShowInView>
             ))}
           </ul>
-
-          <Btn variant="solid" className={"w-full text-center py-4"}>
+          <Btn btnClass={"w-full text-center py-4"}>
             <NavLink to="/about">
               <span>More about us</span>
             </NavLink>

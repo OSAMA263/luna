@@ -4,6 +4,15 @@ import Btn from "../Btn";
 import blackCurve from "@/assets/black-curve.svg";
 import GreenCurve from "@/assets/green-curve.svg";
 import { motion } from "framer-motion";
+import Logo from "../Logo";
+
+export const nav_links = [
+  { url: "/", label: "Home" },
+  { url: "/about", label: "About" },
+  { url: "/contact", label: "Contact" },
+  { url: "/services", label: "Services" },
+  { url: "/blogs", label: "Blogs" },
+];
 
 export default function Navbar() {
   const { pathname } = useLocation();
@@ -11,7 +20,7 @@ export default function Navbar() {
   return (
     <div className="absolute w-full left-1/2 -translate-x-1/2 top-3 z-50 text-Lime">
       <Layout as="header" className={`flex items-center justify-between`}>
-        <NavLink to="/">logo</NavLink>
+        <Logo />
 
         {/* navigation links */}
         <nav
@@ -22,7 +31,7 @@ export default function Navbar() {
           <Navlinks pathname={pathname} />
         </nav>
 
-        <Btn variant="outline">
+        <Btn variant="outline" y={0} opa={1}>
           <NavLink to="/contact">
             <span>Request a consulation</span>
           </NavLink>
@@ -33,17 +42,9 @@ export default function Navbar() {
 }
 
 function Navlinks({ pathname }) {
-  const data = [
-    { url: "/", label: "Home" },
-    { url: "/about", label: "About" },
-    { url: "/contact", label: "Contact" },
-    { url: "/services", label: "Services" },
-    { url: "/blogs", label: "Blogs" },
-  ];
-
   return (
     <ul className="flex items-center gap-2 py-4">
-      {data.map(({ label, url }) => (
+      {nav_links.map(({ label, url }) => (
         <li key={url}>
           <NavLink
             className={

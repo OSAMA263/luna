@@ -11,7 +11,9 @@ export default function PageWrapper({ className, children, ...rest }) {
           <meta name="description" content={description} />
         </head>
       </Portal>
-      <main className={`pb-20 bg-black ${className ?? ""}`}>{children}</main>
+      <main className={`pb-20 bg-black space-y-32 ${className ?? ""}`}>
+        {children}
+      </main>
     </>
   );
 }

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme {
   --color-Olive: #2f3126;
   --color-Dark-green: #161a18;
@@ -11,6 +12,8 @@ body {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  background-color: #000;
+  line-height: 1.3;
   button,
   input,
   textarea,
@@ -19,9 +22,28 @@ body {
     transition: all 0.3s;
     font-weight: 600;
   }
+  input,
+  textarea {
+    resize: none;
+    border: transparent 1px solid;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--color-Gray);
+    font-weight: 400;
+    outline: none;
+    background-color: #000;
+    &:focus {
+      border-color: var(--color-Lime);
+    }
+    &::placeholder {
+      color: var(--color-Gray);
+    }
+  }
   .swiper-wrapper {
     transition-timing-function: linear !important;
   }
+
   /* global classes styles */
   .btn-bloom {
     position: relative;

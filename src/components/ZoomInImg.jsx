@@ -1,7 +1,7 @@
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export default function ZoomInImg({ src, alt }) {
+export default function ZoomInImg({ src, alt, ...rest }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -18,6 +18,7 @@ export default function ZoomInImg({ src, alt }) {
         alt={alt}
         viewport={{ once: true }}
         transition={{ duration: 0.3 }}
+        {...rest}
         className="object-cover w-full h-full transition duration-500 ease-[emphasized]"
       />
     </div>

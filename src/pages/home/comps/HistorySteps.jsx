@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { FaFan } from "react-icons/fa";
 import { TbCarFanFilled } from "react-icons/tb";
 import { PiFanFill } from "react-icons/pi";
+import ShowInView from "@/components/ShowInView";
 
 export default function HistorySteps() {
   const [step, setStep] = useState(0);
@@ -16,15 +17,21 @@ export default function HistorySteps() {
     <Layout className={"flex gap-4"} id="our-history" as="section">
       <div className="flex-1 space-y-4">
         <SectionTitle>Our method for strategic B2B growth</SectionTitle>
-        <p className="text-Gray">
-          Our streamlined 3-step approach ensures your business gets a focused
-          strategy, practical solutions, and measurable outcomes.
-        </p>
-        <Btn variant="solid" className={"text-lg"}>
-          <Link to="/services">
-            <span>Explore our services</span>
-          </Link>
-        </Btn>
+        <ShowInView>
+          <p className="text-Gray">
+            Our streamlined 3-step approach ensures your business gets a focused
+            strategy, practical solutions, and measurable outcomes.
+          </p>
+        </ShowInView>
+        <ShowInView>
+          <div>
+            <Btn className={"text-lg"} y={20} opa={0}>
+              <Link to="/services">
+                <span>Explore our services</span>
+              </Link>
+            </Btn>
+          </div>
+        </ShowInView>
       </div>
 
       {/* setps graphs */}
