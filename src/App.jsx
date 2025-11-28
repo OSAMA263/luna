@@ -21,9 +21,9 @@ export default function App() {
           <Route element={<About />} path="/about" />
           <Route element={<Contact />} path="/contact" />
           <Route element={<Services />} path="/services" />
-{/* <Route element={<SingleService />} path="/services/:id" /> */}
+          <Route element={<SingleService />} path="/services/:id" />
           <Route element={<Blogs />} path="/blogs" />
-          {/* <Route element={<SingleBlog />} path="/blogs/:id" />  */}
+          <Route element={<SingleBlog />} path="/blogs/:id" /> 
         </Routes>
       </Suspense>
       <Footer />
@@ -33,7 +33,7 @@ export default function App() {
 
 const About = lazy(() => import("@/pages/about/About"));
 const Contact = lazy(() => import("@/pages/contact/Contact"));
-const Services = lazy(()=>import("@/pages/services/Services"));
-// const SingleService = lazy(()=>import("@/pages/services/SingleService"));
-const Blogs = lazy(()=>import("@/pages/blogs/Blogs"));
-// const SingleBlog = lazy(()=>import("@/pages/blogs/SingleBlog"));
+const Services = lazy(() => import("@/pages/services/Services"));
+const SingleService = lazy(() => import("@/pages/services/SingleService"));
+const Blogs = lazy(() => import("@/pages/blogs/Blogs"));
+const SingleBlog = lazy(()=>import("@/pages/blogs/SingleBlog"));

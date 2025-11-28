@@ -45,7 +45,7 @@ const home_blogs = [
     title: "Best practices for keeping your data secure",
     desc: "Create complex passwords and enable MFA for an extra layer of security. Regularly update software, apps, and operating systems to fix vulnerabilities.",
     img: "blogs/blog-img-1.webp",
-    url: "",
+    url: "Best-practices-for-keeping-your-data-secure",
   },
   {
     type: "Workflow Management",
@@ -53,7 +53,7 @@ const home_blogs = [
     title: "How to use analytics to make smarter decisions",
     desc: "Look for insights in historical and real-time data to predict future outcomes. Use machine learning and predictive analytics for deeper insights.",
     img: "blogs/blog-img-2.webp",
-    url: "",
+    url: "How-to-use-analytics-to-make-smarter-decisions",
   },
   {
     type: "Team Collaboration",
@@ -61,7 +61,7 @@ const home_blogs = [
     title: "How to scale your B2B sales funnel in 2025",
     desc: "Utilize project management and automation tools to reduce manual work and enhance efficiency. Implement time management techniques like Eisenhower Matrix to tackle important tasks first.",
     img: "blogs/blog-img-3.webp",
-    url: "",
+    url: "How-to-scale-your-B2B-sales-funnel-in-2025",
   },
   {
     type: "Productivity",
@@ -69,7 +69,7 @@ const home_blogs = [
     title: "The power of market research in B2B strategy",
     desc: "Advanced virtual collaboration tools (VR meetings, digital whiteboards). No-code/low-code customization for tailored workflows.",
     img: "blogs/blog-img-4.webp",
-    url: "",
+    url: "The-power-of-market-research-in-B2B-strategy",
   },
   {
     type: "Data & Analytics",
@@ -77,7 +77,7 @@ const home_blogs = [
     title: "Choosing the right CRM for your B2B sales team",
     desc: "Use clear messaging, regular check-ins, and collaboration tools. Create a culture of constructive feedback and continuous improvement.",
     img: "blogs/blog-img-5.webp",
-    url: "",
+    url: "Choosing-the-right-CRM-for-your-B2B-sales-team",
   },
 ];
 

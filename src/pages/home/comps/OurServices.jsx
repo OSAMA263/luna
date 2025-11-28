@@ -2,7 +2,7 @@ import AccordionWithImgs from "@/components/AccordionWithImgs";
 import Btn from "@/components/Btn";
 import Layout from "@/components/Layout";
 import SectionTitle from "@/components/SectionTitle";
-import { home } from "@/data/accordion";
+import { home_service } from "@/data/accordion";
 import { Link } from "react-router-dom";
 
 export default function OurServices() {
@@ -26,7 +26,7 @@ export default function OurServices() {
       </div>
 
       {/* accordion */}
-      <AccordionWithImgs data={home} />
+      <AccordionWithImgs data={home_service} />
     </Layout>
   );
 }

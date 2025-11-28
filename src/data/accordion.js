@@ -6,7 +6,7 @@ import {
   HiOutlineArrowsExpand,
 } from "react-icons/hi";
 
-const home = [
+const home_service = [
   {
     icon: HiChartPie,
     title: "B2B website design & development",
@@ -19,6 +19,7 @@ const home = [
     ],
     service_img: "services/service-1.svg",
     service_bg: "services/service-bg-1.webp",
+    url: "B2B-website-design-&-development",
   },
   {
     icon: HiFire,
@@ -27,6 +28,7 @@ const home = [
     list: ["SaaS development", "Cloud platform", "MVP"],
     service_img: "services/service-2.svg",
     service_bg: "services/service-bg-2.webp",
+    url: "Custom-SaaS-solutions",
   },
   {
     icon: HiDuplicate,
@@ -35,6 +37,7 @@ const home = [
     list: ["Digital transformation", "B2B marketing", "KPIs"],
     service_img: "services/service-3.svg",
     service_bg: "services/service-bg-3.webp",
+    url: "Enterprise-digital-strategy",
   },
   {
     icon: HiOutlineArrowsExpand,
@@ -43,6 +46,7 @@ const home = [
     list: ["Automation", "Business tools"],
     service_img: "services/service-4.svg",
     service_bg: "services/service-bg-4.webp",
+    url: "CRM-&-ERP-integrations.",
   },
   {
     icon: HiDatabase,
@@ -56,6 +60,7 @@ const home = [
     ],
     service_img: "services/service-5.svg",
     service_bg: "services/service-bg-5.webp",
+    url: "Data-Driven-marketing",
   },
 ];
 
@@ -111,4 +116,4 @@ const Q_A = [
   },
 ];
 
-export { home, about, Q_A };
+export { home_service, about, Q_A };

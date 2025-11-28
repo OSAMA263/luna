@@ -41,27 +41,32 @@ export default function About() {
       </ShowInView>
 
       {/* contact us big card */}
-      <Layout size={{ xl: "60%" }}>
-        <Card
-          className={"flex py-20 px-28 items-center flex-col gap-6 text-center"}
-        >
-          <SectionTitle>
-            Take the first step toward sustainable growth
-          </SectionTitle>
-          <ShowInView>
-            <p className="text-Gray">
-              Looking to scale your B2B business with clarity and confidence?
-              Our consulting experts are ready to guide you every step of the
-              way.
-            </p>
-          </ShowInView>
-          <Btn>
-            <Link to="/contact">
-              <span>Book a free call</span>
-            </Link>
-          </Btn>
-        </Card>
-      </Layout>
+      <BookACall />
     </PageWrapper>
   );
 }
+
+export const BookACall = () => {
+  return (
+    <Layout size={{ xl: "60%" }}>
+      <Card
+        className={"flex py-20 px-28 items-center flex-col gap-6 text-center"}
+      >
+        <SectionTitle>
+          Take the first step toward sustainable growth
+        </SectionTitle>
+        <ShowInView>
+          <p className="text-Gray">
+            Looking to scale your B2B business with clarity and confidence? Our
+            consulting experts are ready to guide you every step of the way.
+          </p>
+        </ShowInView>
+        <Btn>
+          <Link to="/contact">
+            <span>Book a free call</span>
+          </Link>
+        </Btn>
+      </Card>
+    </Layout>
+  );
+};

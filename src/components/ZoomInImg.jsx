@@ -8,7 +8,7 @@ export default function ZoomInImg({ src, alt, ...rest }) {
     offset: ["0 1", "1 .3"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
     <div ref={ref} className="overflow-hidden rounded-2xl h-full">

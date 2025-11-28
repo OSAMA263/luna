@@ -4,7 +4,7 @@ import Review from "@/components/Review";
 import SectionTitle from "@/components/SectionTitle";
 import PageWrapper from "@/components/shared/PageWrapper";
 import FAQ from "../contact/comps/FAQ";
-import { home } from "@/data/accordion";
+import { home_service } from "@/data/accordion";
 import { Link } from "react-router";
 import Card from "@/components/Card";
 import ShowInView from "@/components/ShowInView";
@@ -31,16 +31,20 @@ export default function Services() {
 
       {/* services cards */}
       <Layout
-        as="serction"
+        as="section"
         id="services-cards"
         className={"grid grid-cols-3 gap-4"}
       >
-        {home.map(({ desc, title, service_bg, list }, i) => (
+        {home_service.map(({ desc, title, service_bg, list, url }, i) => (
           <ShowInView className="size-full" key={title} i={i}>
-            <Link to="" className="rounded-3xl block h-full">
+            <Link to={"/services/" + url} className="rounded-3xl block h-full">
               <Card className="p-4! h-full flex flex-col gap-4 border-none bg-Dark-green hover:bg-Olive hover:[&_img]:scale-105 hover:[&_span]:bg-Dark-green">
                 <div className="rounded-3xl overflow-hidden">
-                  <img src={service_bg} alt={title} className="size-full object-cover"/>
+                  <img
+                    src={service_bg}
+                    alt={title}
+                    className="size-full object-cover"
+                  />
                 </div>
                 <h2 className="text-xl text-Lime">{title}</h2>
                 <p className="text-Gray">{desc}</p>

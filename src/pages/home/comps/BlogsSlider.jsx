@@ -70,7 +70,7 @@ function Slider() {
             {/* blog info */}
             <Link
               className="grid grid-cols-2 rounded-4xl overflow-hidden hover:[&_img]:scale-105"
-              to={url}
+              to={"/blogs/" + url}
             >
               <div className="overflow-hidden">
                 <img
