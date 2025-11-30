@@ -7,7 +7,7 @@ import { GiTireIronCross, GiOrbital, GiSelect } from "react-icons/gi";
 
 export default function Benefits() {
   return (
-    <Layout as={"section"} id="benefits" className="space-y-6">
+    <Layout as={"section"} id="benefits" className="space-y-16">
       <div className="space-y-4 text-center mb-20 w-[70%] mx-auto">
         <SectionTitle>What makes us the right partner</SectionTitle>
         <ShowInView>
@@ -20,10 +20,10 @@ export default function Benefits() {
       </div>
 
       {/* three cards */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 gap-4">
         {benefitsCards.map(({ icon: Icon, title, text }, i) => (
           <ShowInView key={title} y={0} offset={0.7} i={i}>
-            <Card className={"space-y-8"}>
+            <Card className={"space-y-8 2xl:p-6 lg:p-4 h-full"}>
               <div className="flex items-center gap-4 font-semibold text-Lime">
                 <Icon className="text-4xl" />
                 <h2 className="text-xl">{title}</h2>

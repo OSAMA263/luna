@@ -5,13 +5,13 @@ export default function Layout({ children, className, as, size, ...rest }) {
     <Container
       as={as ?? "div"}
       maxW={{
-        base: "100%",
-        md: "90%",
-        lg: "80%",
-        xl: "70%",
+        base: "98%",
+        lg: "95%",
+        xl: "85%",
+        "2xl": "75%",
         ...(size ?? null),
       }}
-      className={`mx-auto! ${className ?? ""}`}
+      className={`mx-auto! px-0! ${className ?? ""}`}
       {...rest}
     >
       {children}

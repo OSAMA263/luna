@@ -33,7 +33,7 @@ export default function Services() {
       <Layout
         as="section"
         id="services-cards"
-        className={"grid grid-cols-3 gap-4"}
+        className={"grid lg:grid-cols-3 sm:grid-cols-2 gap-4"}
       >
         {home_service.map(({ desc, title, service_bg, list, url }, i) => (
           <ShowInView className="size-full" key={title} i={i}>

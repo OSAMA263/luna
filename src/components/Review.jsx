@@ -10,20 +10,20 @@ export default function Review() {
         loading="lazy"
       />
 
-      <div className="flex items-start gap-8 py-20 w-[75%] mx-auto relative z-10">
+      <div className="flex items-start gap-8 py-20 md:w-[75%] px-4 mx-auto relative z-10">
         <img
           src="home/review-avatar.jpg"
           alt="reviewer"
-          className="rounded-xl size-24"
+          className="rounded-xl lg:size-24 size-10"
           loading="lazy"
         />
         <div>
-          <SectionTitle className={"text-2xl! mb-4"}>
+          <h2 className={"text-Lime font-semibold lg:text-2xl text-lg mb-4"}>
             Working with Corpos was a game-changer for our B2B strategy. Their
             team didn’t just offer advice — they became an extension of our
             leadership. Their insights, professionalism, and tailored approach
             helped us unlock new growth and streamline our operations.
-          </SectionTitle>
+          </h2>
           <span className="text-Olive">McLovin</span>
         </div>
       </div>

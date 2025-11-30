@@ -23,7 +23,7 @@ function MotionTag(props) {
 
   const { ref, inView } = useInView({
     threshold: offset ?? 0.2,
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (

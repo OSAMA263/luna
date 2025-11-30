@@ -6,7 +6,7 @@ export default function SectionTitle({ children, className, as, ...rest }) {
     <ShowInView {...rest}>
       <Box
         as={as ?? "h2"}
-        className={`text-4xl text-Lime font-semibold ${className ?? ""}`}
+        className={`lg:text-4xl text-2xl text-Lime font-semibold ${className ?? ""}`}
       >
         {children}
       </Box>

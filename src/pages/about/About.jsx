@@ -16,6 +16,7 @@ export default function About() {
   return (
     <PageWrapper title="About">
       <Hero />
+
       <Strategy />
 
       {/* accordion with imgs changes */}
@@ -50,7 +51,7 @@ export const BookACall = () => {
   return (
     <Layout size={{ xl: "60%" }}>
       <Card
-        className={"flex py-20 px-28 items-center flex-col gap-6 text-center"}
+        className={"flex sm:py-20 sm:px-28 p-10 items-center flex-col gap-6 text-center"}
       >
         <SectionTitle>
           Take the first step toward sustainable growth

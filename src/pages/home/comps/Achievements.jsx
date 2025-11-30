@@ -5,12 +5,12 @@ import ShowInView from "@/components/ShowInView";
 export default function Achievements() {
   return (
     <Layout as="section" id="our-achievment">
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid sm:grid-cols-2 gap-10">
         <ShowInView>
           <img
             src={EarthImg}
             alt="our-impact-across-wolrd"
-            className="w-[80%] object-cover"
+            className="w-[80%] object-cover mx-auto"
           />
         </ShowInView>
         <div className="flex flex-col justify-between">

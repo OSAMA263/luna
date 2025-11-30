@@ -8,7 +8,7 @@ export default function Btn({
   ...rest
 }) {
   const variants = {
-    solid: "rounded-lg py-3 text-Olive bg-Lime hover:text-Lime",
+    solid: "rounded-lg md:py-3 text-Olive bg-Lime hover:text-Lime",
     outline:
       "border rounded-full border-Lime text-Lime hover:text-Olive [&::after]:bg-Lime!",
   };

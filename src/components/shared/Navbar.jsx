@@ -1,10 +1,11 @@
+/* eslint-disable react-refresh/only-export-components */
 import { NavLink, useLocation } from "react-router-dom";
 import Layout from "../Layout";
-import Btn from "../Btn";
-import blackCurve from "@/assets/black-curve.svg";
-import GreenCurve from "@/assets/green-curve.svg";
 import { motion } from "framer-motion";
 import Logo from "../Logo";
+import { useMediaQuery } from "@chakra-ui/react";
+import Large from "./navbars/Large";
+import Small from "./navbars/Small";
 
 export const nav_links = [
   { url: "/", label: "Home" },
@@ -15,35 +16,31 @@ export const nav_links = [
 ];
 
 export default function Navbar() {
+  const [smallScreen] = useMediaQuery("(max-width: 1024px)");
   const { pathname } = useLocation();
 
   return (
     <div className="absolute w-full left-1/2 -translate-x-1/2 top-3 z-50 text-Lime">
-      <Layout as="header" className={`flex items-center justify-between`}>
+      <Layout
+        as="header"
+        className={`flex max-lg:p-4! items-center justify-between`}
+      >
         <Logo />
 
         {/* navigation links */}
-        <nav
-          className={`relative px-16 -top-px ${pathname === "/" ? "bg-Dark-green" : "bg-black"} `}
-        >
-          {/* curve imges */}
-          <CurvesImgs pathname={pathname} />
-          <Navlinks pathname={pathname} />
-        </nav>
-
-        <Btn variant="outline" y={0} opa={1}>
-          <NavLink to="/contact">
-            <span>Request a consulation</span>
-          </NavLink>
-        </Btn>
+        {smallScreen ? (
+          <Small pathname={pathname} />
+        ) : (
+          <Large pathname={pathname} />
+        )}
       </Layout>
     </div>
   );
 }
 
-function Navlinks({ pathname }) {
+export function Navlinks({ pathname, className }) {
   return (
-    <ul className="flex items-center gap-2 py-4">
+    <ul className={`flex items-center gap-2 py-4 ${className ?? ""}`}>
       {nav_links.map(({ label, url }) => (
         <li key={url}>
           <NavLink
@@ -63,26 +60,5 @@ function Navlinks({ pathname }) {
         </li>
       ))}
     </ul>
-  );
-}
-
-function CurvesImgs({ pathname }) {
-  return (
-    <>
-      <div className="absolute h-full z-50 left-0.5 -translate-x-full">
-        <img
-          className="h-full"
-          src={pathname == "/" ? GreenCurve : blackCurve}
-          alt="curve img"
-        />
-      </div>
-      <div className="absolute h-full z-50 right-0.5 translate-x-full rotate-y-180">
-        <img
-          className="h-full"
-          src={pathname === "/" ? GreenCurve : blackCurve}
-          alt="curve img"
-        />
-      </div>
-    </>
   );
 }

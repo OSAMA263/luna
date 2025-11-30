@@ -22,10 +22,10 @@ export default function Hero() {
           </ShowInView>
 
           {/* contact info cards*/}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid md:grid-cols-3 gap-3">
             {contact_info.map(({ Icon, title, url, label }, i) => (
               <ShowInView key={title} i={i}>
-                <Card className={"space-y-6 font-semibold text-start p-12"}>
+                <Card className={"space-y-6 font-semibold h-full text-start lg:p-12 p-6"}>
                   <div className="flex items-center gap-4 text-Lime">
                     <Icon className="text-2xl" />
                     <h2 className="text-lg">{title}</h2>

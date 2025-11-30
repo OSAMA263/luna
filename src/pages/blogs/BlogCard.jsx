@@ -6,19 +6,19 @@ export default function BlogCard(props) {
   const { i, type, date, title, desc, img, url, service_bg, other } = props;
 
   return (
-    <ShowInView className={`h-full  ${i == 0 && "col-span-2"}`} i={i}>
+    <ShowInView className={`h-full  ${i == 0 && "lg:col-span-2"}`} i={i}>
       <Link
         to={`${service_bg ? "/services/" : "/blogs/"}${url}`}
         className={`rounded-3xl h-full block`}
       >
         <Card
-          className={`p-4! h-full border-none hover:[&_img]:scale-105 bg-Dark-green hover:bg-Dark-green/60 gap-6 ${other ? "h-auto!" : "grid"} ${i == 0 ? "grid-cols-2" : "grid-rows-2"}`}
+          className={`p-4! h-full border-none hover:[&_img]:scale-105 bg-Dark-green hover:bg-Dark-green/60 gap-6 ${other ? "h-auto! space-y-4" : "grid"} ${i == 0 ? "lg:grid-cols-2" : "lg:grid-rows-2"}`}
         >
           <div className="rounded-3xl h-full overflow-hidden">
             <img
               src={img ?? service_bg}
               alt={title}
-              className="h-full object-cover"
+              className="lg:max-h-full h-full w-full max-h-[40vh] object-cover"
             />
           </div>
 

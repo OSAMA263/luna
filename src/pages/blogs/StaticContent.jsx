@@ -29,7 +29,7 @@ export default function StaticContent() {
         </ShowInView>
       </div>
 
-      <ul className="list-disc marker:text-Gray">
+      <ul className="list-disc ms-6 marker:text-Gray">
         {list.map((item, i) => (
           <ShowInView i={i} key={i}>
             <li>
@@ -65,7 +65,7 @@ export default function StaticContent() {
       </div>
 
       <ShowInView>
-        <h2 className="text-Lime rounded-xl p-16 bg-Dark-green">
+        <h2 className="text-Lime rounded-xl md:p-16 p-6 bg-Dark-green">
           Existence certainly explained how improving the household pretended.
           Delightful own attachment her partiality unaffected occasionally
           thoroughly. Adieus it no wonders spirit houses. Started several

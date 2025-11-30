@@ -9,7 +9,7 @@ export default function AccordionWithImgs({ data, className }) {
   const serviceData = data.find((item) => item.title == service) ?? null;
 
   return (
-    <div className={`grid grid-cols-2 gap-4 poop ${className ?? ""}`}>
+    <div className={`grid lg:grid-cols-2 gap-4 ${className ?? ""}`}>
       <Accordion.Root
         variant={"plain"}
         multiple={false}
@@ -21,7 +21,7 @@ export default function AccordionWithImgs({ data, className }) {
       </Accordion.Root>
 
       {/* services images */}
-      <ShowInView className="size-full">
+      <ShowInView className="lg:max-h-full max-h-[50vh]">
         {serviceData?.service_bg && (
           <div className="h-full rounded-2xl relative overflow-hidden">
             <img
@@ -32,7 +32,7 @@ export default function AccordionWithImgs({ data, className }) {
             />
             {serviceData.service_img && (
               <img
-                className="absolute z-10 size-[65%] rounded-xl top-1/2 left-1/2 -translate-1/2 object-cover"
+                className="absolute max-xl:hidden z-10 size-[65%] rounded-xl top-1/2 left-1/2 -translate-1/2 object-cover"
                 src={serviceData.service_img}
                 alt={serviceData.service_img}
                 loading="lazy"

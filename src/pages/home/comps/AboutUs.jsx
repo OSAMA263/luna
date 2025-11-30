@@ -19,9 +19,12 @@ export default function AboutUs() {
             <AutoSlider
               dir="rtl"
               spaceBetween={10}
-              slidesPerView={6}
+              breakpoints={{
+                1350: { slidesPerView: 6 },
+              }}
+              slidesPerView={4}
               array={home_sponsers}
-              className="[&_img]:size-20 py-14 flex items-center justify-center rounded-2xl bg-[#0e100f]"
+              className="[&_img]:size-20 2xl:py-14 py-8 flex items-center justify-center rounded-2xl bg-[#0e100f]"
               shadowSides="from-black to-transparent w-32"
             />
           </ShowInView>
@@ -29,7 +32,11 @@ export default function AboutUs() {
       </Layout>
 
       {/* our stragegies steps */}
-      <Layout as={"section"} id="strategies" className="flex gap-24">
+      <Layout
+        as={"section"}
+        id="strategies"
+        className="flex max-lg:flex-col 2xl:gap-24 gap-10"
+      >
         <div className="flex-[1.5] flex flex-col gap-y-20">
           <SectionTitle>
             Informed strategy, Operational strenght, and sustainable results.
@@ -49,7 +56,7 @@ export default function AboutUs() {
             We specialize in empowering Corpo companies with results-driven
             consulting solutions tailored to modern business challenges.
           </ShowInView>
-          <ul className="text-lg list-disc divide-y divide-Gray/50 border-y border-Gray/50">
+          <ul className="ps-6 2xl:text-lg list-disc divide-y divide-Gray/50 border-y border-Gray/50">
             {listSteps.map((step) => (
               <ShowInView key={step}>
                 <li className="py-5">{step}</li>

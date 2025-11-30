@@ -27,7 +27,7 @@ function AutoSlider(props) {
 
   return (
     <Swiper
-      slidesPerView={5}
+      slidesPerView={2}
       observer
       observeParents
       freeMode
@@ -48,12 +48,12 @@ function AutoSlider(props) {
         ? children
         : array?.map((item, i) => (
             <SwiperSlide
-              className={"flex! items-center gap-2 " + className}
+              className={"flex! items-center justify-center gap-2 " + className}
               key={i}
             >
               <img loading="lazy" src={item.icon} alt={item.icon} />
               <span
-                className={`text-Gray text-lg font-semibold ${!autoSlide ? "instuery-swiper-title" : ""}`}
+                className={`text-Gray xl:text-lg font-semibold ${!autoSlide ? "instuery-swiper-title" : ""}`}
               >
                 {item.title ?? null}
               </span>

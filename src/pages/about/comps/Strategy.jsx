@@ -17,7 +17,7 @@ export default function Strategy() {
       </div>
 
       {/* steps cards */}
-      <ul className="grid grid-cols-6 gap-2 marker:bg-Lime list-disc">
+      <ul className="grid lg:grid-cols-6 grid-cols-2 gap-2 marker:bg-Lime list-disc">
         {strategy_steps.map(({ title, desc }, i) => {
           const lastRow = strategy_steps.length % 3;
           return (
@@ -26,9 +26,11 @@ export default function Strategy() {
               key={i}
               i={i - 1}
             >
-              <Card className={"space-y-2 font-semibold text-base! h-full"}>
-                <li className="text-Lime">{title}</li>
-                <p className="text-Gray">{desc}</p>
+              <Card className={"font-semibold text-base! h-full"}>
+                <div className="space-y-2 ms-6">
+                  <li className="text-Lime">{title}</li>
+                  <p className="text-Gray">{desc}</p>
+                </div>
               </Card>
             </ShowInView>
           );

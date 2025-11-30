@@ -7,7 +7,6 @@ import { home_services } from "../../../data/slider";
 import Btn from "@/components/Btn";
 import { Link } from "react-router-dom";
 import SectionTitle from "@/components/SectionTitle";
-import ShowInView from "@/components/ShowInView";
 
 export default function Hero() {
   return (
@@ -25,13 +24,13 @@ export default function Hero() {
           />
 
           {/* text on the videpo */}
-          <Layout className="mt-auto grid grid-cols-2 justify-between pb-20">
-            <SectionTitle as={"h1"} className="text-6xl">
+          <Layout className="mt-auto grid lg:grid-cols-2 gap-4 justify-between pb-20">
+            <SectionTitle as={"h1"} className="2xl:text-6xl lg:text-5xl text-4xl">
               Built for Corpo, focused on results.
             </SectionTitle>
 
             {/* link btn */}
-            <div className="flex ms-auto mt-auto">
+            <div className="flex lg:ms-auto mt-auto">
               <Btn i={2} btnClass="text-lg py-4 px-8 w-fit">
                 <Link to="/services">
                   <span>Explore our services</span>
@@ -42,7 +41,15 @@ export default function Hero() {
         </div>
 
         {/* services auto sliding */}
-        <AutoSlider array={home_services} className="py-5" />
+        <AutoSlider
+          array={home_services}
+          breakpoints={{
+            1350: { slidesPerView: 5 },
+            900: { slidesPerView: 3 },
+          }}
+          className="py-5"
+          spaceBetween={5}
+        />
       </HeroPage>
     </section>
   );

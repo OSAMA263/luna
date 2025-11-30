@@ -28,9 +28,9 @@ export default function Hero() {
           {/* imgs */}
           <div className="flex gap-2 items-center [&_img]:w-full">
             <ShowInView i={4} className="rounded-3xl overflow-hidden">
-              <img src="about/about-img1.webp" alt="" />
-              <img src="about/about-img2.webp" alt="" />
-              <img src="about/about-img3.webp" alt="" />
+              <img className="max-md:hidden" src="about/about-img1.webp" alt="img-1" />
+              <img  src="about/about-img2.webp" alt="img-2" />
+              <img className="max-md:hidden" src="about/about-img3.webp" alt="img-3" />
             </ShowInView>
           </div>
         </Layout>

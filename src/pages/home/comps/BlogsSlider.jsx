@@ -16,7 +16,7 @@ export default function BlogsSlider() {
       <Slider />
 
       {/* swiper controls and blogs btn */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center px-2">
         <Btn>
           <Link to="/blogs">
             <span>View Blogs</span>
@@ -45,7 +45,7 @@ export default function BlogsSlider() {
 
 function Slider() {
   return (
-    <ShowInView>
+    <ShowInView className="px-2!">
       <AutoSlider
         shadowSides={"from-transparent"}
         autoSlide={false}
@@ -69,18 +69,18 @@ function Slider() {
             </div>
             {/* blog info */}
             <Link
-              className="grid grid-cols-2 rounded-4xl overflow-hidden hover:[&_img]:scale-105"
+              className="grid md:grid-cols-2 max-md:grid-rows-2 rounded-4xl overflow-hidden hover:[&_img]:scale-105"
               to={"/blogs/" + url}
             >
               <div className="overflow-hidden">
                 <img
                   src={img}
                   alt={title}
-                  className="h-full object-cover duration-500!"
+                  className="size-full object-cover duration-500!"
                 />
               </div>
               {/* description */}
-              <div className="text-Lime bg-black font-semibold p-16 gap-16 flex flex-col justify-between">
+              <div className="text-Lime bg-black font-semibold md:p-16 py-2 px-4 md:gap-16 gap-2 flex flex-col justify-between">
                 <div className="space-y-2">
                   <span className="text-Gray text-sm block">{date}</span>
                   <h2>{desc}</h2>

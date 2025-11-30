@@ -14,7 +14,7 @@ export default function HistorySteps() {
   const [step, setStep] = useState(0);
 
   return (
-    <Layout className={"flex gap-4"} id="our-history" as="section">
+    <Layout className={"flex max-lg:flex-col gap-8"} id="our-history" as="section">
       <div className="flex-1 space-y-4">
         <SectionTitle>Our method for strategic B2B growth</SectionTitle>
         <ShowInView>
@@ -35,7 +35,7 @@ export default function HistorySteps() {
       </div>
 
       {/* setps graphs */}
-      <div className="flex-2 flex flex-col justify-between gap-40">
+      <div className="flex-2 flex flex-col justify-between lg:gap-40 gap-60">
         {/* steps indecator */}
         <StepIndecator {...{ step, setStep }} />
         {/* graphs */}
@@ -47,11 +47,11 @@ export default function HistorySteps() {
 
 function StepIndecator({ step, setStep }) {
   return (
-    <div className="rounded-full w-fit p-2 gap-1 bg-Dark-green flex items-center">
+    <div className="max-lg:mx-auto rounded-full lg:w-1/2 w-full p-2 gap-1 bg-Dark-green grid grid-cols-3 items-center">
       {steps.map(({ title }, i) => (
         <span
           onClick={() => setStep(i)}
-          className="relative cursor-pointer text-Gray text-gray text-sm rounded-full px-12 py-3 bg-black"
+          className="relative cursor-pointer text-center text-Gray text-gray text-sm rounded-full py-3 bg-black"
           key={title}
         >
           <span className="z-10 relative">Step {i + 1}</span>
@@ -83,7 +83,7 @@ function GraphsTimeLine({ step }) {
               <div
                 className={`flex items-center gap-x-5 border-2 text-Lime rounded-lg border-Lime/35 rounded-br-none px-4 py-2 bg-black w-[85%] ms-auto translate-x-1 -translate-y-1 ${step == i ? "brightness-100" : "brightness-50"}`}
               >
-                <Icon className="text-3xl" />
+                <Icon className="text-3xl max-md:hidden" />
                 {title}
               </div>
             </div>

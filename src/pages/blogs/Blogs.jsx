@@ -24,7 +24,7 @@ export default function Blogs() {
       </section>
 
       {/* blogs cards */}
-      <Layout as="section" id="blogs-cards" className="grid grid-cols-3 gap-4">
+      <Layout as="section" id="blogs-cards" className="grid lg:grid-cols-3 gap-4">
         {home_blogs.map((data, i) => (
           <BlogCard key={data.title} {...{ ...data, i }} />
         ))}

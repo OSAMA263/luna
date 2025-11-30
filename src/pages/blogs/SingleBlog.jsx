@@ -15,10 +15,10 @@ export default function SingleBlog() {
   const blogData = home_blogs.find(({ url }) => url == id);
 
   return (
-    <PageWrapper title={blogData.title}>
+    <PageWrapper key={id} title={blogData.title}>
       <section id={blogData.title}>
-        <HeroPage>
-          <Layout className="flex flex-col items-center gap-8 text-center pb-20">
+        <HeroPage className={"px-2"}>
+          <Layout className="flex flex-col items-center gap-8 text-center md:pb-20 pb-6">
             {/* data */}
             <div className="text-xs flex font-normal items-center gap-4">
               <ShowInView>
@@ -57,7 +57,7 @@ export default function SingleBlog() {
             </Link>
           </Btn>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 gap-4">
           {home_blogs
             .filter((blog) => blog.url !== id)
             .slice(0, 3)

@@ -26,7 +26,9 @@ export default function Industries() {
         <AutoSlider
           autoSlide={false}
           array={Industrie}
-          slidesPerView={3.5}
+          breakpoints={{
+            1024: { slidesPerView: 3.5 },
+          }}
           speed={600}
           spaceBetween={20}
           shadowSides="from-transparent"

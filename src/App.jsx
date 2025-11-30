@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 import LoaderPage from "./components/shared/LoaderPage";
+import ErrorPage from "./components/shared/ErrorPage";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -24,9 +25,10 @@ export default function App() {
           <Route element={<SingleService />} path="/services/:id" />
           <Route element={<Blogs />} path="/blogs" />
           <Route element={<SingleBlog />} path="/blogs/:id" /> 
+          <Route element={<ErrorPage />} path="*" /> 
         </Routes>
       </Suspense>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

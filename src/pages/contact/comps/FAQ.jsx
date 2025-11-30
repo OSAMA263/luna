@@ -9,7 +9,7 @@ export default function FAQ() {
   return (
     <Layout as={"section"} id="most-asked-questions" className={"space-y-16"}>
       {/* title */}
-      <div className="space-y-3 w-[75%] ms-0">
+      <div className="space-y-3 md:w-[75%] ms-0">
         <SectionTitle>Frequently asked questions</SectionTitle>
         <ShowInView>
           <p className="text-Gray">
@@ -21,7 +21,7 @@ export default function FAQ() {
       </div>
 
       {/* questions & image */}
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid md:grid-cols-2 gap-2">
         {/* accordion questions and answers */}
         <Accordion.Root variant={"plain"} className="space-y-2" multiple>
           {Q_A.map(({ title, desc }, i) => (
@@ -36,7 +36,7 @@ export default function FAQ() {
         </Accordion.Root>
 
         {/* img */}
-        <ShowInView className="rounded-2xl overflow-hidden">
+        <ShowInView className="max-md:hidden rounded-2xl overflow-hidden">
           <img
             src="contact/faqs-img.webp"
             className="size-full object-cover"
