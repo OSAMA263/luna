@@ -9,8 +9,8 @@ import Logo from "../Logo";
 export default function Footer() {
   return (
     <footer className="bg-Dark-green pt-14 pb-4 rounded-t-4xl">
-      <Layout className="grid grid-cols-2 gap-3 [&>div]:bg-black [&>div]:p-10 [&>div]:rounded-3xl relative">
-        <div className="flex flex-col justify-between">
+      <Layout className="grid lg:grid-cols-2 gap-3 [&>div]:bg-black [&>div]:p-10 [&>div]:rounded-3xl relative">
+        <div className="flex flex-col gap-4 justify-between">
           {/* navigation links */}
           <ul className="space-y-2">
             {nav_links.map(({ label, url }, i) => (
@@ -43,7 +43,7 @@ export default function Footer() {
 
         {/* contact info links */}
         <div className="space-y-10">
-          <div className="flex justify-between items-start">
+          <div className="sm:flex justify-between space-y-6 items-start">
             <div className="space-y-4 *:block">
               <h2 className="text-Lime text-lg">Contact on</h2>
               <a
@@ -106,22 +106,22 @@ function CreatedByme() {
         <>
           <img
             src={blackCurve}
-            className="absolute left-0 -translate-x-[98%] bottom-0"
+            className="absolute left-0 -translate-x-[96%] bottom-0"
             alt="dark-curve"
           />
           <img
             src={blackCurve}
-            className="absolute right-0 rotate-90 translate-x-full bottom-0"
+            className="absolute right-0 rotate-90 translate-x-[96%] bottom-0"
             alt="dark-curve"
           />
           <img
             src={blackCurve}
-            className="absolute bottom-full right-1/2 rotate-90 translate-x-full"
+            className="max-sm:hidden absolute bottom-full right-1/2 rotate-90 translate-x-full"
             alt="dark-curve"
           />
           <img
             src={blackCurve}
-            className="absolute bottom-full left-1/2 -translate-x-full"
+            className="max-sm:hidden absolute bottom-full left-1/2 -translate-x-full"
             alt="dark-curve"
           />
         </>

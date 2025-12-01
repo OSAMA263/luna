@@ -15,7 +15,11 @@ export default function SingleBlog() {
   const blogData = home_blogs.find(({ url }) => url == id);
 
   return (
-    <PageWrapper key={id} title={blogData.title}>
+    <PageWrapper
+      key={id}
+      title={blogData.title}
+      description="How to Build a Repeatable Go-to-Market — Key takeaways and practical steps for B2B teams to build repeatable GTM and scale faster."
+    >
       <section id={blogData.title}>
         <HeroPage className={"px-2"}>
           <Layout className="flex flex-col items-center gap-8 text-center md:pb-20 pb-6">
@@ -29,7 +33,7 @@ export default function SingleBlog() {
               </ShowInView>
             </div>
 
-            <SectionTitle>{blogData.title}</SectionTitle>
+            <SectionTitle as="h1">{blogData.title}</SectionTitle>
             <ShowInView i={1}>
               <p className="text-Lime font-semibold mx-auto w-[75%]">
                 {blogData.desc}

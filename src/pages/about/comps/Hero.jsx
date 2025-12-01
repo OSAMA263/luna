@@ -11,7 +11,7 @@ export default function Hero() {
       <HeroPage>
         <Layout size={{ xl: "80%" }} className={"space-y-16 pb-20"}>
           <div className="flex flex-col items-center gap-4">
-            <SectionTitle i={1}>Get to know B2bizz B2B consulting</SectionTitle>
+            <SectionTitle as="h1" i={1}>Get to know B2bizz B2B consulting</SectionTitle>
             <ShowInView i={2} y={40}>
               <p className="text-Gray font-semibold mx-auto text-center">
                 We’re your long-term growth partners. Discover who we are and

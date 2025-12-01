@@ -20,6 +20,7 @@ export default function SingleService() {
     <PageWrapper
       key={id}
       title={serviceData.title}
+      description="Pricing Strategy — Practical B2B pricing that helps companies increase revenue, shorten sales cycles, and scale predictable growth."
       className="[&_p]:text-Gray [&_p]:font-smeibold"
     >
       <Hero serviceData={serviceData} />

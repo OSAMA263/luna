@@ -14,7 +14,7 @@ import ShowInView from "@/components/ShowInView";
 
 export default function About() {
   return (
-    <PageWrapper title="About">
+    <PageWrapper title="About" description="Learn how B2bizz partners with B2B companies to design growth strategies, scale sales, and unlock operational efficiencies.">
       <Hero />
 
       <Strategy />

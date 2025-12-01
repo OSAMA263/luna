@@ -6,7 +6,10 @@ import { lazy } from "react";
 
 export default function Home() {
   return (
-    <PageWrapper title="Luna - base" description="">
+    <PageWrapper
+      title="Luna - base"
+      description="Empower your B2B business with result-driven consulting. From strategy to execution, we deliver measurable growth through expert digital and operational solutions."
+    >
       <Hero />
       <AboutUs />
       <Industries />

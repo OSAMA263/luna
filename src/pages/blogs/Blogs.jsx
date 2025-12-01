@@ -8,11 +8,14 @@ import BlogCard from "./BlogCard";
 
 export default function Blogs() {
   return (
-    <PageWrapper title={"Blogs"}>
+    <PageWrapper
+      title={"Blogs"}
+      description="Actionable B2B insights, case studies, and frameworks on growth strategy, pricing, and sales — practical reads for B2B leaders."
+    >
       <section id="blogs-hero">
         <HeroPage>
           <Layout className={"flex flex-col items-center text-center gap-6"}>
-            <SectionTitle>Our blogs</SectionTitle>
+            <SectionTitle as="h1">Our blogs</SectionTitle>
             <ShowInView i={1}>
               <p className="text-Gray">
                 Learn more about our adventures and most popular topics, new
@@ -24,7 +27,11 @@ export default function Blogs() {
       </section>
 
       {/* blogs cards */}
-      <Layout as="section" id="blogs-cards" className="grid lg:grid-cols-3 gap-4">
+      <Layout
+        as="section"
+        id="blogs-cards"
+        className="grid lg:grid-cols-3 gap-4"
+      >
         {home_blogs.map((data, i) => (
           <BlogCard key={data.title} {...{ ...data, i }} />
         ))}

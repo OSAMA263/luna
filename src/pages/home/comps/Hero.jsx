@@ -24,14 +24,14 @@ export default function Hero() {
           />
 
           {/* text on the videpo */}
-          <Layout className="mt-auto grid lg:grid-cols-2 gap-4 justify-between pb-20">
+          <Layout className="mt-auto  grid lg:grid-cols-2 gap-4 justify-between md:pb-20 pb-6 max-sm:ps-6!">
             <SectionTitle as={"h1"} className="2xl:text-6xl lg:text-5xl text-4xl">
               Built for Corpo, focused on results.
             </SectionTitle>
 
             {/* link btn */}
             <div className="flex lg:ms-auto mt-auto">
-              <Btn i={2} btnClass="text-lg py-4 px-8 w-fit">
+              <Btn i={2} btnClass="sm:text-lg py-4 px-8 w-fit">
                 <Link to="/services">
                   <span>Explore our services</span>
                 </Link>

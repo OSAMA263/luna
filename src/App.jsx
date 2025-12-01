@@ -28,7 +28,7 @@ export default function App() {
           <Route element={<ErrorPage />} path="*" /> 
         </Routes>
       </Suspense>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

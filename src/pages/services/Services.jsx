@@ -11,10 +11,13 @@ import ShowInView from "@/components/ShowInView";
 
 export default function Services() {
   return (
-    <PageWrapper>
+    <PageWrapper
+      title="Services"
+      description="Explore our B2B consulting services — go-to-market strategy, pricing, sales enablement, and implementation tailored to your industry."
+    >
       <section id="hero-title">
         <HeroPage>
-          <Layout className={"flex items-center flex-col gap-5 text-center"}>
+          <Layout as="h1" className={"flex items-center flex-col gap-5 text-center"}>
             <SectionTitle>Our services</SectionTitle>
             <ShowInView i={1}>
               <p className="font-semibold text-Gray mx-auto w-[75%]">

@@ -12,7 +12,7 @@ export default function Hero({ serviceData }) {
         <Layout className="lg:grid flex flex-col grid-cols-2 gap-16 md:pb-20 pb-6">
           {/* title and btn link */}
           <div className="space-y-6">
-            <SectionTitle>{serviceData.title}</SectionTitle>
+            <SectionTitle as="h1">{serviceData.title}</SectionTitle>
             <ShowInView i={1}>
               <p>
                 Conversion-focused websites are built for speed, trust, and lead

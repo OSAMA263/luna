@@ -85,4 +85,16 @@ body {
   .instuery-swiper-title {
     @apply absolute w-full text-center bottom-0 py-5 bg-linear-to-t from-Olive to-transparent text-Lime text-2xl;
   }
+  .small-nav-toggler {
+    position: relative;
+    margin-trim: block;
+    > span {
+      display: block;
+      margin-block: 8px;
+      height: 2px;
+      background-color: var(--color-Lime);
+      transition: all .3s;
+      margin-inline-start: auto;
+    }
+  }
 }

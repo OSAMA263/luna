@@ -14,7 +14,7 @@ export default function Hero() {
           {/* title and shit */}
           <ShowInView className="w-full">
             <div className="space-y-3">
-              <SectionTitle>Contact with us</SectionTitle>
+              <SectionTitle as="h1">Contact with us</SectionTitle>
               <p className="text-Gray">
                 Let’s start a conversation that moves your business forward.
               </p>

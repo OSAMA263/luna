@@ -16,7 +16,7 @@ export default function BlogsSlider() {
       <Slider />
 
       {/* swiper controls and blogs btn */}
-      <div className="flex justify-between items-center px-2">
+      <div className="flex justify-between items-center px-4">
         <Btn>
           <Link to="/blogs">
             <span>View Blogs</span>
@@ -45,7 +45,7 @@ export default function BlogsSlider() {
 
 function Slider() {
   return (
-    <ShowInView className="px-2!">
+    <ShowInView className="px-4">
       <AutoSlider
         shadowSides={"from-transparent"}
         autoSlide={false}
