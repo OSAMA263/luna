@@ -1,1 +1,0 @@
-import{n as e}from"./index-CJZyPryE.js";function n({className:r,children:o}){return e.jsx("div",{className:`border border-Lime/20 transition-all duration-300 hover:border-Lime/50 rounded-3xl p-2 font-semibold  ${r??""}`,children:o})}export{n as C};
