@@ -23,13 +23,14 @@ export default function FAQ() {
       {/* questions & image */}
       <div className="grid md:grid-cols-2 gap-2">
         {/* accordion questions and answers */}
-        <Accordion.Root variant={"plain"} className="space-y-2" multiple>
-          {Q_A.map(({ title, desc }, i) => (
-            <AccordionItem
-              key={title}
-              title={`0${i + 1}. ` + title}
-              value={title}
-            >
+        <Accordion.Root
+          defaultValue={[Q_A[0].title]}
+          variant={"plain"}
+          className="space-y-2"
+          multiple
+        >
+          {Q_A.map(({ title, desc }) => (
+            <AccordionItem key={title} title={title}>
               <span>{desc}</span>
             </AccordionItem>
           ))}
