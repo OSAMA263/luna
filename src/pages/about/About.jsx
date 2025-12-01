@@ -14,7 +14,10 @@ import ShowInView from "@/components/ShowInView";
 
 export default function About() {
   return (
-    <PageWrapper title="About" description="Learn how B2bizz partners with B2B companies to design growth strategies, scale sales, and unlock operational efficiencies.">
+    <PageWrapper
+      title="About"
+      description="Learn how B2bizz partners with B2B companies to design growth strategies, scale sales, and unlock operational efficiencies."
+    >
       <Hero />
 
       <Strategy />
@@ -35,6 +38,7 @@ export default function About() {
           </h2>
           <AutoSlider
             array={home_sponsers}
+            breakpoints={{ 1024: { slidesPerView: 4 } }}
             className="[&_img]:size-16"
             shadowSides="from-black to-transparent w-40"
           />
@@ -51,7 +55,9 @@ export const BookACall = () => {
   return (
     <Layout size={{ xl: "60%" }}>
       <Card
-        className={"flex sm:py-20 sm:px-28 p-10 items-center flex-col gap-6 text-center"}
+        className={
+          "flex sm:py-20 sm:px-28 p-10 items-center flex-col gap-6 text-center"
+        }
       >
         <SectionTitle>
           Take the first step toward sustainable growth

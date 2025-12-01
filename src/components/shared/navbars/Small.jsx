@@ -19,7 +19,7 @@ export default function Small() {
     >
       <Drawer.Trigger asChild>
         {/* nav btn toggler */}
-        <button className="small-nav-toggler">
+        <button aria-label="nav-menu-toggler" className="small-nav-toggler">
           <span style={{ width: 32 }}></span>
           <span style={{ width: open ? 20 : 32 }}></span>
           <span style={{ width: open ? 14 : 32 }}></span>

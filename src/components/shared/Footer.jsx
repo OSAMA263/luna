@@ -27,11 +27,12 @@ export default function Footer() {
 
           {/* social contact */}
           <div className="flex items-center gap-2">
-            {social_links.map(({ Icon, url }) => (
+            {social_links.map(({ Icon, url, label }) => (
               <Link
                 to={url}
                 key={url}
                 target="_blank"
+                aria-label={"link-" + label}
                 className="text-lg text-Lime border border-Lime rounded-lg p-2 hover:bg-Olive hover:border-transparent"
               >
                 <Icon />
@@ -72,6 +73,7 @@ export default function Footer() {
             <h2 className="text-Lime text-lg">Check our blogs</h2>
             <Link
               to="/blogs"
+              aria-label="blogs-page"
               className="inline-block hover:[&>img]:scale-105 size-[35%] overflow-hidden rounded-2xl"
             >
               <img
@@ -131,7 +133,15 @@ function CreatedByme() {
 }
 
 const social_links = [
-  { Icon: FaFacebookF, url: "https://www.facebook.com/share/v/1Ej4sHE66M/" },
-  { Icon: FaYoutube, url: "https://youtu.be/KEoGrbKAyKE" },
-  { Icon: FaLinkedinIn, url: "https://www.linkedin.com/in/osama00/" },
+  {
+    Icon: FaFacebookF,
+    url: "https://www.facebook.com/share/v/1Ej4sHE66M/",
+    label: "facebook",
+  },
+  { Icon: FaYoutube, url: "https://youtu.be/KEoGrbKAyKE", label: "youtube" },
+  {
+    Icon: FaLinkedinIn,
+    url: "https://www.linkedin.com/in/osama00/",
+    label: "linkdin",
+  },
 ];
