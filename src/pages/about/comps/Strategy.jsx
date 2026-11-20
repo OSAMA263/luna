@@ -22,7 +22,7 @@ export default function Strategy() {
           const lastRow = strategy_steps.length % 3;
           return (
             <ShowInView
-              className={i > lastRow ? "col-span-3" : "col-span-2"}
+              className={`p-2 ${i > lastRow ? "col-span-3" : "col-span-2"}`}
               key={i}
               i={i - 1}
             >
