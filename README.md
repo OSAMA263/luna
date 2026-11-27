@@ -1,16 +1,50 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# luna
 
-Currently, two official plugins are available:
+a website built to showcase a brand, its services, and what it has to offer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+luna is a web project focused on presenting a companys identity, services, and information through a clean and organized layout.
 
-## React Compiler
+i built it with a focus on responsive design, smooth interactions and animations, and keeping things simple to navigate.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**[live demo](https://osama263.github.io/luna/)**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## features
+
+- responsive layout across different screen sizes
+- organized sections for showcasing the brand and its services
+- dedicated about and contact pages
+- reusable components
+- smooth and interactive ui
+
+## built with
+
+- react
+- javascript
+- vite
+- tailwind css
+- framer motion
+
+## getting started
+
+to run the project locally:
+
+```bash
+git clone https://github.com/OSAMA263/luna.git
+
+cd luna
+
+npm install
+
+npm run dev
+```
+
+## project notes
+
+this project was built as a way to create a clean and engaging brand showcase website, while working with reusable components, layouts, and responsive styling.
+
+---
+
+built by [osama khaled](https://github.com/OSAMA263)
